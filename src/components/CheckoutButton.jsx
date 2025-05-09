@@ -6,25 +6,24 @@ const CheckoutButton = ({ product }) => {
     try {
       const response = await fincraApi.initiateCheckout({
         currency: "NGN",
-        amount: product.price,
+        amount: product.price, // e.g. 1500
         customer: {
-          name: "John Doe",
-          email: "johndoe@example.com",
+          name: "Customer Name",
+          email: "customer@theiremail.com",
         },
         paymentMethods: ["card", "bank_transfer"],
         feeBearer: "business",
         redirectUrl: "http://localhost:5173/ThankYou",
       });
 
-      // Redirect to Fincra checkout page
       const checkoutLink = response.data?.data?.checkoutLink;
       if (checkoutLink) {
         window.location.href = checkoutLink;
       } else {
-        alert("Could not initiate payment.");
+        alert("Checkout link not found.");
       }
     } catch (err) {
-      console.error("Fincra error:", err);
+      console.error("Fincra API Error:", err.response?.data || err.message);
       alert("Something went wrong with payment.");
     }
   };
