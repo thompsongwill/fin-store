@@ -6,7 +6,7 @@ const fincraApi = axios.create({
   baseURL,
   headers: {
     "Content-Type": "application/json",
-    Authorization: `Bearer ${import.meta.env.Fin_STORE_FINCRA_PUBLIC_KEY}`,
+    Authorization: `Bearer ${import.meta.env.FIN_STORE_FINCRA_PUBLIC_KEY}`,
   },
 });
 
