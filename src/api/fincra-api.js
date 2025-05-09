@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseURL = "https://sandboxapi.fincra.com"; // Use production URL in prod
+const baseURL = "https://sandboxapi.fincra.com/checkout/payments"; // Use production URL in prod
 
 const fincraApi = axios.create({
   baseURL,
