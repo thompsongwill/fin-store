@@ -1,0 +1,11 @@
+{
+  "version": "1.0",
+  "apis": [
+    {
+      "identifier": "fincra-api",
+      "source": "@fincra-api/v2.0#zl5vp82gma2qfcnd",
+      "integrity": "sha512-OMxVsgeUUJcTnF0U4VtOyX6b9Spdp7o5WJexkz+MzZtc9MdZPr5ItJix7dLUy3mmEKzTwNWr3iJ9cfitGMCIlA==",
+      "installerVersion": "6.1.3"
+    }
+  ]
+}
